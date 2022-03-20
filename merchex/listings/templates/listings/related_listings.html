@@ -1,0 +1,10 @@
+{% extends "listings/base.html" %} 
+{% block title %}Related Listings{% endblock %}
+
+{% block content %}
+<ul>
+  {% for listing in band.listing_set.all %}
+  <li><a href="{% url 'listing-detail' listing.id %}">{{ listing.title|capfirst }}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}

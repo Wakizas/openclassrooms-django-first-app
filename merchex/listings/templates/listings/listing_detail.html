@@ -1,0 +1,14 @@
+{% extends 'listings/base.html' %}
+{% block title %}Listing detail{% endblock title %}
+
+{% block content %}
+
+<h2>{{ merch.title }}</h2>
+<ul>
+    <li>Sold: {{ merch.sold|yesno }}</li>
+    <li>Type: {{ merch.get_type_display }}</li>
+    <li>Band: {{ merch.band }}</li>
+</ul>
+
+<p>{{ merch.description }}</p>
+{% endblock content %}

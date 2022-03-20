@@ -1,0 +1,10 @@
+{% extends "listings/base.html" %} 
+{% block title %}Merchs{% endblock %}
+
+{% block content %}
+<ul>
+  {% for merch in merchs %}
+  <li><a href="{% url 'listing-detail' merch.id %}">{{ merch.title|capfirst }}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
